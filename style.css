@@ -1,0 +1,168 @@
+*{box-sizing:border-box}
+:root{
+  --wine:#4a0717;
+  --wine2:#24030c;
+  --red:#8e1733;
+  --soft:#d98a9d;
+  --cream:#fff5f7;
+  --gold:#e6b36a;
+}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--cream);
+  background:
+    radial-gradient(circle at 50% 10%, #651126 0%, transparent 34%),
+    radial-gradient(circle at 20% 80%, #350612 0%, transparent 28%),
+    linear-gradient(145deg,#130108,#30040f 55%,#160108);
+  font-family:"Cairo",system-ui,sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;opacity:.08;
+  background-image:radial-gradient(#fff 1px,transparent 1px);
+  background-size:34px 34px;
+}
+main{min-height:100vh}
+.screen{
+  min-height:100vh;display:none;align-items:center;justify-content:center;
+  padding:30px 18px;position:relative;
+}
+.screen.active{display:flex}
+#welcome{flex-direction:column;text-align:center;overflow:hidden}
+.glow{
+  position:absolute;width:360px;height:360px;border-radius:50%;
+  background:#b21842;filter:blur(100px);opacity:.16;
+}
+.brand{
+  position:relative;font-family:"Playfair Display",serif;
+  font-size:clamp(42px,12vw,88px);letter-spacing:8px;
+  text-shadow:0 0 28px rgba(255,125,160,.35);
+}
+.brand.small{font-size:32px;letter-spacing:5px}
+.subtitle{color:#e9bac5;max-width:430px;margin:4px auto 34px;line-height:1.8}
+.big-heart{
+  border:0;background:transparent;cursor:pointer;position:relative;
+  width:230px;height:230px;display:grid;place-items:center;
+  filter:drop-shadow(0 0 28px rgba(211,31,79,.55));
+}
+.big-heart:before,.big-heart:after{
+  content:"";position:absolute;border-radius:50%;width:130px;height:130px;
+  background:linear-gradient(145deg,#bd244d,#6c0b26);
+}
+.big-heart:before{left:31px;top:35px}
+.big-heart:after{left:70px;top:35px}
+.big-heart span{
+  position:relative;z-index:2;font-size:170px;line-height:1;
+  color:#9d1639;transform:rotate(-45deg);
+  text-shadow:0 0 30px #c52b55;
+  animation:pulse 1.25s ease-in-out infinite;
+}
+.tap{color:#dba1ae;letter-spacing:2px}
+@keyframes pulse{0%,100%{transform:rotate(-45deg) scale(1)}50%{transform:rotate(-45deg) scale(1.1)}}
+
+.lock-card{
+  width:min(430px,100%);padding:34px 22px;border-radius:28px;text-align:center;
+  background:rgba(55,5,18,.76);border:1px solid rgba(224,133,157,.2);
+  box-shadow:0 30px 90px rgba(0,0,0,.45),inset 0 0 40px rgba(255,255,255,.025);
+  backdrop-filter:blur(12px);
+}
+.lock-icon{font-size:54px;margin-bottom:6px}
+.lock-card p{color:#e8b5c1}
+.pin{height:50px;display:flex;justify-content:center;gap:12px;margin:15px 0 22px;direction:ltr}
+.pin i{
+  width:14px;height:14px;border-radius:50%;margin-top:16px;
+  border:1px solid #c77b91;background:transparent;
+}
+.pin i.filled{background:#f0a2b5;box-shadow:0 0 12px #d63e69}
+.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.keypad button{
+  height:58px;border:1px solid rgba(255,210,220,.12);border-radius:17px;
+  background:rgba(255,255,255,.055);color:#fff;font:600 20px "Cairo",sans-serif;
+  cursor:pointer;transition:.18s;
+}
+.keypad button:hover{background:rgba(176,30,70,.3);transform:translateY(-2px)}
+.keypad button:active{transform:scale(.96)}
+.keypad .secondary{font-size:14px;color:#d8a7b3}
+.error{height:24px!important;color:#ff91a9!important;margin:12px 0 0!important}
+
+#memories{display:block;padding:55px 14px 80px}
+.memory-header{text-align:center;max-width:700px;margin:0 auto 45px}
+.memory-header .brand{font-size:52px}
+.memory-header p{color:#dfabb7;margin-top:8px}
+.heartbeat{
+  font-size:28px;color:#bd3155;display:inline-block;
+  animation:heartbeat 1.05s ease-in-out infinite;
+}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.18)}60%{transform:scale(1)}}
+
+.gallery{max-width:700px;margin:auto}
+.memory{
+  margin:0 auto 48px;text-align:center;
+  animation:rise .7s both;
+}
+.memory img{
+  display:block;width:100%;height:auto;max-height:850px;object-fit:contain;
+  border-radius:20px;border:1px solid rgba(255,188,205,.18);
+  box-shadow:0 22px 60px rgba(0,0,0,.48);
+  background:#120107;
+}
+.memory p{
+  margin:16px auto 0;max-width:650px;color:#f0cbd3;
+  font-size:17px;line-height:2.05;
+}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+.teddy-wrap{text-align:center;padding:20px 0 0}
+.teddy{
+  border:0;background:transparent;color:#f4cbd5;cursor:pointer;
+  display:inline-flex;flex-direction:column;align-items:center;gap:7px;
+  transition:.25s;
+}
+.teddy span{font-size:92px;filter:drop-shadow(0 10px 22px rgba(0,0,0,.45));animation:teddyFloat 2s ease-in-out infinite}
+.teddy small{font:600 14px "Cairo";color:#d79aaa}
+.teddy:hover{transform:scale(1.08)}
+@keyframes teddyFloat{50%{transform:translateY(-9px)}}
+
+#letter{padding:40px 16px}
+.letter-card{
+  position:relative;width:min(700px,100%);padding:42px 27px;border-radius:28px;
+  background:linear-gradient(155deg,rgba(91,12,34,.9),rgba(32,3,12,.96));
+  border:1px solid rgba(231,164,181,.2);
+  box-shadow:0 30px 90px rgba(0,0,0,.5);
+  text-align:right;overflow:hidden;
+}
+.letter-card:before{
+  content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+  left:-70px;top:-80px;background:#a71c46;filter:blur(70px);opacity:.28;
+}
+.letter-card h2{text-align:center;font-size:30px;margin:8px 0 26px}
+.letter-card p{font-size:17px;line-height:2.1;color:#f3d3da;position:relative}
+.letter-card strong{color:#fff}
+.floating-heart{position:absolute;left:24px;top:20px;color:#d94267;font-size:30px;animation:pulseSimple 1.2s infinite}
+@keyframes pulseSimple{50%{transform:scale(1.2)}}
+.teddy-mini{text-align:center;font-size:58px}
+.final-line{text-align:center!important;margin-top:28px!important}
+.signature{text-align:center;color:#d49aaa;margin-top:30px;font-style:italic}
+
+.hearts{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}
+.float-heart{
+  position:absolute;bottom:-30px;color:#c52850;opacity:.55;
+  animation:floatUp linear forwards;font-size:15px;
+}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+
+.unlocking{animation:unlock .9s ease both}
+@keyframes unlock{0%{transform:scale(.98);filter:brightness(.7)}55%{transform:scale(1.025);filter:brightness(1.5)}100%{transform:scale(1);filter:none}}
+
+@media(max-width:520px){
+  .brand{letter-spacing:5px}
+  .big-heart{width:200px;height:200px}
+  .big-heart span{font-size:145px}
+  .big-heart:before,.big-heart:after{width:112px;height:112px}
+  .big-heart:before{left:25px}.big-heart:after{left:60px}
+  .memory p{font-size:15px;line-height:2}
+  .letter-card{padding:34px 20px}
+}
