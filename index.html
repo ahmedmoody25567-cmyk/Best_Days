@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#22040d">
+
+  <title>MEMORIES ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- القلوب المتحركة -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- الشاشة الأولى -->
+    <section id="welcome" class="screen active">
+
+      <div class="glow"></div>
+
+      <div class="brand">
+        MEMORIES
+      </div>
+
+      <p class="subtitle">
+        A little place for the moments that mean everything.
+      </p>
+
+      <!-- القلب -->
+      <button id="heartButton" class="big-heart" aria-label="فتح الخزنة">
+        <span>♥</span>
+      </button>
+
+      <p class="tap">
+        اضغطي على القلب
+      </p>
+
+    </section>
+
+
+    <!-- شاشة الرقم السري -->
+    <section id="lock" class="screen">
+
+      <div class="lock-card">
+
+        <div class="lock-icon">
+          🔐
+        </div>
+
+        <div class="brand small">
+          MEMORIES
+        </div>
+
+        <p>
+          الخزنة دي ليها رقم خاص بيها ❤️
+        </p>
+
+        <!-- مكان أرقام الباسورد -->
+        <div
+          class="pin"
+          id="pinDisplay"
+          aria-label="الرقم السري">
+        </div>
+
+
+        <!-- لوحة الأرقام -->
+        <div class="keypad">
+
+          <button data-key="1">1</button>
+          <button data-key="2">2</button>
+          <button data-key="3">3</button>
+
+          <button data-key="4">4</button>
+          <button data-key="5">5</button>
+          <button data-key="6">6</button>
+
+          <button data-key="7">7</button>
+          <button data-key="8">8</button>
+          <button data-key="9">9</button>
+
+          <button data-key="clear" class="secondary">
+            مسح
+          </button>
+
+          <button data-key="0">
+            0
+          </button>
+
+          <button data-key="back" class="secondary">
+            ⌫
+          </button>
+
+        </div>
+
+        <p
+          id="error"
+          class="error"
+          role="alert">
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- شاشة الذكريات -->
+    <section id="memories" class="screen">
+
+      <div class="memory-header">
+
+        <div class="brand">
+          MEMORIES
+        </div>
+
+        <!-- نبض القلب -->
+        <div class="heartbeat">
+          ♥
+        </div>
+
+        <p>
+          أحلى ذكريات عمرنا قضيناها سوا ❤️
+        </p>
+
+      </div>
+
+
+      <div class="gallery">
+
+
+        <!-- الصورة الأولى -->
+        <article class="memory">
+
+          <img
+            src="images/memory-01.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            في صور كتير ممكن تبقى حلوة، بس الصورة دي ليها إحساس مختلف…
+            يمكن عشان فيها جزء مننا مش هيتكرر.
+            وأنا كل ما أشوفها أفتكر قد إيه وجودك في حياتي خلّى لحظات عادية تبقى غالية.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة الثانية -->
+        <article class="memory">
+
+          <img
+            src="images/memory-02.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            أجمل حاجة فينا إننا بنعرف نضحك ونبقى على طبيعتنا مع بعض.
+            الضحكة اللي بينا، والهزار، والنظرات الصغيرة…
+            حاجات بسيطة بس عندي أغلى من حاجات كتير في الدنيا.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة الثالثة -->
+        <article class="memory">
+
+          <img
+            src="images/memory-03.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            يمكن المكان والوقت يتغيروا، لكن إحساسي وإنتِ جنبي بيفضل هو هو.
+            كنتِ دايمًا الشخص اللي بيخلّي اللحظة أهدى وأحلى،
+            وده شيء عمري ما هعتبره عادي.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة الرابعة -->
+        <article class="memory">
+
+          <img
+            src="images/memory-04.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            حتى التفاصيل الصغيرة اللي محدش ياخد باله منها،
+            أنا بحبها لأنها تخصنا إحنا.
+            إيد في إيد، مشروب بنشربه سوا، أو لحظة ساكتين فيها…
+            كل ده بالنسبالي ذكرى تستاهل تتحفظ.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة الخامسة -->
+        <article class="memory">
+
+          <img
+            src="images/memory-05.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            بحب الذكريات اللي مفيهاش تكلف، اللي كنا فيها إحنا وبس.
+            يمكن الصورة بسيطة، لكن وراها إحساس كبير،
+            وإحساس إن كان عندي وقتها شخص بحبه وكنت مبسوط إنه موجود جنبي.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة السادسة -->
+        <article class="memory">
+
+          <img
+            src="images/memory-06.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            في لحظات بتعدي بسرعة، وبعدها نكتشف إنها كانت من أجمل لحظات عمرنا.
+            وأنا نفسي كل لحظة حلوة عشناها تفضل جواكي زي ما هي جوايا،
+            مهما حصل ومهما اتغيرت الأيام.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة السابعة -->
+        <article class="memory">
+
+          <img
+            src="images/memory-07.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            أكتر حاجة بحبها في صورنا إنها بتفكرني إن الحب مش كلام وبس.
+            الحب هو إن وجود شخص واحد يخلي اليوم أخف،
+            والقعدة أحن، والضحكة من القلب…
+            وإنتِ الشخص ده بالنسبة لي.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة الثامنة -->
+        <article class="memory">
+
+          <img
+            src="images/memory-08.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            الصورة دي بتفكرني بقد إيه إحنا عندنا حاجات تخصنا إحنا،
+            حاجات محدش يقدر يفهم معناها غيرنا.
+            ودي أكتر حاجة مخلياني متمسك بكل ذكرى بينا.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة التاسعة -->
+        <article class="memory">
+
+          <img
+            src="images/memory-09.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            أنا مش محتاج ذكرى مثالية عشان أحبها…
+            كفاية إنها كانت وإنتِ فيها.
+            عشان كده حتى أبسط صورنا عندي ليها مكان كبير،
+            لأنها شايلة إحساس عمره ما كان بسيط.
+          </p>
+
+        </article>
+
+
+        <!-- الصورة العاشرة -->
+        <article class="memory">
+
+          <img
+            src="images/memory-10.jpeg"
+            alt="ذكرى جميلة"
+            loading="lazy">
+
+          <p>
+            ولو الدنيا خدتنا في ألف اتجاه،
+            نفسي دايمًا نفتكر إن كان في وقت ضحكنا فيه من قلبنا،
+            وقربنا من بعض، وعملنا ذكريات تستاهل نرجعلها كل ما نزعل.
+          </p>
+
+        </article>
+
+
+        <!-- الدبدوب في النهاية -->
+        <div class="teddy-wrap">
+
+          <button
+            id="teddy"
+            class="teddy"
+            aria-label="افتحي رسالة">
+
+            <span>
+              🧸
+            </span>
+
+            <small>
+              اضغطي عليا
+            </small>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- رسالة الاعتذار -->
+    <section id="letter" class="screen">
+
+      <div class="letter-card">
+
+        <div class="floating-heart">
+          ♥
+        </div>
+
+        <div class="teddy-mini">
+          🧸
+        </div>
+
+        <h2>
+          إليكِ أنتِ… ❤️
+        </h2>
+
+
+        <p>
+          أنا عارف إن بينا زعل، وعارف إن ممكن أكون ضايقتك
+          أو قصّرت في حقك، وعشان كده أنا مش داخل أبرر
+          ولا أقول إن الغلط مش مني.
+          أنا داخل أقولك ببساطة:
+          <strong>أنا آسف.</strong>
+        </p>
+
+
+        <p>
+          آسف على أي كلمة وجعتك، وعلى أي موقف خلاكي تحسي
+          إني مش مقدّر وجودك بالشكل اللي تستاهليه.
+          يمكن ساعات معرفش أعبّر صح، ويمكن أغلط وأنا فاكر إني بعمل الصح،
+          لكن ده عمره ما كان معناه إنك مش مهمة عندي.
+        </p>
+
+
+        <p>
+          الحقيقة إنك من أكتر الناس اللي ليهم مكان حقيقي في قلبي،
+          وكل الذكريات اللي فوق دي بالنسبة لي مش مجرد صور…
+          دي لحظات أنا بفتكرها وببتسم،
+          وبتفكرني قد إيه وجودك فرق معايا.
+        </p>
+
+
+        <p>
+          أنا مش طالب منك تنسي الزعل في لحظة،
+          ولا عايز أضغط عليكي.
+          كل اللي نفسي فيه إنك تسمحيلي أصلّح اللي بوّظته،
+          وأثبتلك بالأفعال إنك غالية عندي
+          وإن علاقتنا تستاهل نحافظ عليها.
+        </p>
+
+
+        <p class="final-line">
+
+          بحبك، ومش عايز الخلاف ده يكون أقوى
+          من كل الحلو اللي بينا.
+
+          <br>
+
+          <strong>
+            حقك عليا… ونفسي نرجع نضحك سوا تاني. ❤️
+          </strong>
+
+        </p>
+
+
+        <div class="signature">
+          — من حد بيحبك بجد
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
